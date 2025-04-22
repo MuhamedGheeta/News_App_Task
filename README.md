@@ -63,3 +63,10 @@ cd News_App_Tas
 npm install
 # or
 yarn install
+
+## 📦 create .env file in project root
+put 
+API_BASE_URL='https://newsapi.org/v2/everything'
+API_KEY='db9437fd400444749a9937e24bf957fa'
+------------
+run app
