@@ -3,20 +3,51 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@tests/*": ["__tests__/*"],
-      "@components/*": ["src/components/*"],
-      "@screens/*": ["src/screens/*"],
-      "@assets/*": ["src/assets/*"],
-      "@common/*": ["src/common/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@i18n/*": ["src/i18n/*"],
-      "@navigation/*": ["src/navigation/*"],
-      "@utils/*": ["src/utils/*"],
-      "@store/*": ["src/store/*"],
-      "@types/*": ["src/types/*"],
-      "@service/*": ["src/service/*"],
-      "@env": ["env.d.ts"]
+      "@tests/*": [
+        "__tests__/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@screens/*": [
+        "src/screens/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@i18n/*": [
+        "src/i18n/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@service/*": [
+        "src/service/*"
+      ],
+      "@env": [
+        "env.d.ts"
+      ]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "env.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "env.d.ts",
+    "nativewind-env.d.ts"
+  ]
 }

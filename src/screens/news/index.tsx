@@ -1,11 +1,5 @@
 import {API_BASE_URL, API_KEY} from '@env';
-import {
-  ActivityIndicator,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {ActivityIndicator, FlatList, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import Colors from '@common/colors';
 
@@ -83,22 +77,19 @@ const NewsScreen = () => {
     setRefreshing(false); // Stop refreshing after data is fetched
   };
   return (
-    <View style={styles.container}>
-      <Text style={styles.headerTxt}>{'News List Task'}</Text>
+    <View className="flex-1 bg-white px-[15px] py-[10px]">
+      <Text className="text-4xl font-bold text-center text-black py-[40px]">
+        News List Task
+      </Text>
+
       <SearchInput
         placeholder={t('search...')}
         onChangeText={handleSearch}
         style={{width: ScaleWidth('90%')}}
         value={searchQuery}
       />
-      <View style={styles.innerContainer}>
-        <View
-          style={{
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            gap: 20,
-            justifyContent: 'center',
-          }}>
+      <View className="flex-1 items-center pt-[20px]">
+        <View className="flex-row flex-wrap gap-[20px] justify-center">
           <ButtonWithIcon
             text="Filter"
             btnTitleStyle={{color: Colors.white}}
@@ -129,15 +120,15 @@ const NewsScreen = () => {
           />
         </View>
         {isLoading ? (
-          <View style={{paddingTop: ScaleHeight('20%')}}>
+          <View className="pt-[20%]">
             <ActivityIndicator size="large" color={Colors.primary} />
           </View>
         ) : error ? (
-          <Text style={styles.errorText}>
+          <Text className="text-center text-red-500 mt-[20%] text-lg">
             Failed to load news. Please try again.
           </Text>
         ) : data?.articles?.length === 0 ? (
-          <Text style={styles.noDataText}>
+          <Text className="text-center text-gray-500 mt-[20%] text-lg">
             No news found for the selected query.
           </Text>
         ) : (
@@ -147,7 +138,7 @@ const NewsScreen = () => {
             renderItem={({item}) => <NewsCard {...item} />}
             onRefresh={handleRefresh}
             refreshing={refreshing}
-            style={{marginTop: 10}}
+            className="mt-[10px]"
           />
         )}
       </View>
@@ -156,37 +147,3 @@ const NewsScreen = () => {
 };
 
 export default NewsScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Colors.white,
-    paddingHorizontal: ScaleWidth(15),
-    paddingVertical: ScaleHeight(10),
-  },
-  headerTxt: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: Colors.black,
-    textAlign: 'center',
-    paddingTop: ScaleHeight(20),
-    paddingBottom: ScaleHeight(20),
-  },
-  innerContainer: {
-    flex: 1,
-    alignItems: 'center',
-    paddingTop: ScaleHeight(20),
-  },
-  errorText: {
-    fontSize: 16,
-    color: Colors.red,
-    textAlign: 'center',
-    marginTop: ScaleHeight('20%'),
-  },
-  noDataText: {
-    fontSize: 16,
-    color: Colors.gray,
-    textAlign: 'center',
-    marginTop: ScaleHeight('20%'),
-  },
-});
