@@ -29,7 +29,8 @@ A simple and modern **React Native News App** that fetches and displays news art
 ## 🛠️ Tech Stack
 
 - **React Native**
-- **TypeScript** (optional)
+- **TypeScript** 
+- **Tailwind Style** 
 - **Axios**
 - **React Navigation**
 - **Debounce Utility** (e.g., lodash.debounce or custom hook)
