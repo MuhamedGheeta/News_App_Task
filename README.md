@@ -1,2 +1,1 @@
-# News_App_Task
-New App Task 
+# React-Native-Structure
