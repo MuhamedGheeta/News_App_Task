@@ -70,4 +70,4 @@ put
 API_BASE_URL='https://newsapi.org/v2/everything'
 API_KEY='db9437fd400444749a9937e24bf957fa'
 ------------
-run app
+run app using :- npx react-native run-android
