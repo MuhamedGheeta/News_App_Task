@@ -60,14 +60,14 @@ https://drive.google.com/file/d/1xSK3Gh-lMQjJnwTdrdZAmPX5fCNyAqA7/view?usp=shari
 
 ```bash
 git clone https://github.com/MuhamedGheeta/News_App_Task.git
-cd News_App_Tas
+cd News_App_Task
 npm install
 # or
 yarn install
 
 ## 📦 create .env file in project root
 put 
-API_BASE_URL='https://newsapi.org/v2/everything'
-API_KEY='db9437fd400444749a9937e24bf957fa'
+API_BASE_URL = https://newsapi.org/v2/everything
+API_KEY = db9437fd400444749a9937e24bf957fa
 ------------
 run app using :- npx react-native run-android
